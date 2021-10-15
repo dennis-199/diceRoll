@@ -25,6 +25,25 @@
         android:background="@color/purple_200"
         android:gravity="center"
         android:text="7" />
+    <TextView
+        android:id="@+id/counttextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="You have rolled the dice 0 times"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/newcolor"/>
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onTouch"
+        android:text="@string/count_button"
+        android:backgroundTint="@color/teal_200"/>
+
+
     <Button
         android:id="@+id/button_toast"
         android:layout_width="match_parent"

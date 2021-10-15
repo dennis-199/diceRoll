@@ -2,4 +2,5 @@
     <string name="app_name">diceRoll</string>
     <string name="button_roll">roll</string>
     <string name="button_toast">Toast</string>
+    <string name="count_button">COUNT</string>
 </resources>

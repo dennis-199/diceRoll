@@ -2,11 +2,13 @@ package com.example.diceroll
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
+    var count=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,6 +17,8 @@ class MainActivity : AppCompatActivity() {
 
     val buttonRoll: Button = findViewById(R.id.button_roll)
         buttonRoll.setOnClickListener { rollDice() }
+
+
     }
 
     private fun showToast(){
@@ -25,5 +29,12 @@ class MainActivity : AppCompatActivity() {
 
         val textviewresult: TextView = findViewById(R.id.text_result)
         textviewresult.text = generatedRandom.toString()
+    }
+
+    fun onTouch(view: View) {
+        count+= 1
+
+        val counttextview = findViewById(R.id.counttextview) as TextView
+        counttextview.text = "You have clicked the button $count times."
     }
 }
