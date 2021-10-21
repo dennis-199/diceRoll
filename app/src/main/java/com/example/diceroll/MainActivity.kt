@@ -35,6 +35,6 @@ class MainActivity : AppCompatActivity() {
         count+= 1
 
         val counttextview = findViewById(R.id.counttextview) as TextView
-        counttextview.text = "You have clicked the button $count times."
+        counttextview.text = "count $count ."
     }
 }
