@@ -16,9 +16,18 @@ class MainActivity : AppCompatActivity() {
         buttonToast.setOnClickListener { showToast() }
 
     val buttonRoll: Button = findViewById(R.id.button_roll)
-        buttonRoll.setOnClickListener { rollDice() }
+        buttonRoll.setOnClickListener { rollDice()
+            count++}
+
+    val buttonCount: Button = findViewById(R.id.button_count)
+        buttonCount.setOnClickListener { onTouch() }
 
 
+    }
+
+    private fun onTouch() {
+        val counttext: TextView = findViewById(R.id.text_result)
+        counttext.text="Roll counts $count ."
     }
 
     private fun showToast(){
@@ -31,10 +40,5 @@ class MainActivity : AppCompatActivity() {
         textviewresult.text = generatedRandom.toString()
     }
 
-    fun onTouch(view: View) {
-        count+= 1
 
-        val counttextview = findViewById(R.id.counttextview) as TextView
-        counttextview.text = "count $count ."
-    }
 }
